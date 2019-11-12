@@ -13,5 +13,6 @@ class degree_provider(models.Model):
     deg_provider_name=models.CharField(max_length=32)
     mail_id=models.EmailField()
     password=models.CharField(max_length=32)
+    
 
 # Create your models here.
