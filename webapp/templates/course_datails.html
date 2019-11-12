@@ -1,0 +1,28 @@
+{%extends 'template.html'%}
+{%block title%}Dashboard{%endblock%}
+{%block main %}
+<div class="container">
+    <table class="table w-auto table-bordered">
+        <tbody>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Status</th>
+                <th>Credits</th>
+
+
+            </tr>
+            <tr>
+              {% for course in courses %}
+                <td>course.course_name</td>
+              <td>Course Details1</td>
+                <td>Course Details2</td>
+                  <td>Course Details3</td>
+                {%endfor%}
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
