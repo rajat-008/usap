@@ -1,0 +1,38 @@
+{%extends 'template.html'%}
+{%load static%}
+{%block title%}Login{%endblock%}
+{%block style%}
+<link href="{%static 'text1.css'%}" rel="stylesheet" type="text/css"/>{%endblock%}
+{%block main%}
+
+<form action="/login" method="post">
+
+
+  <div class="container">
+    <label for="cname"><b>Course name</b></label>
+    <input type="text" placeholder="Enter Course name" name="course_name" required>
+<br>
+<label for="desc"><b>Description</b></label>
+<input type="text" placeholder="Enter description" name="desc" required>
+
+<br>
+<label for="url"><b>URL</b></label>
+<input type="url" placeholder="Enter URL" name="url" required>
+
+<br>
+<label for="duration"><b>Duration</b></label>
+<input type="number" placeholder="Enter Duration" name="duration" required>
+
+<br>
+<label for="credit"><b>Credits</b></label>
+<input type="number" placeholder="Enter Credits" name="credit" required>
+
+<br>
+
+<br>
+    <button type="submit">Register</button>
+    <br>
+
+
+  </div>
+</form>
