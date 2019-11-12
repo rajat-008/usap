@@ -6,7 +6,7 @@
 {%block main%}
 
 <form action="/login" method="post">
-
+  {%csrf_token%}
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
@@ -17,9 +17,9 @@
 <br>
 <label for="degree"><b>degree</b></label>
 <select class="form-control" name="type">
-  <option value="Student">Student</option>
-  <option value="Degree_provider">Degree Provider</option>
-  <option value="Course_provider">Course Provider</option>
+  <option value="student">Student</option>
+  <option value="degree_provider">Degree Provider</option>
+  <option value="course_provider">Course Provider</option>
   </select>
 
 <br>

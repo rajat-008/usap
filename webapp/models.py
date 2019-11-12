@@ -2,14 +2,13 @@ from django.db import models
 
 
 class Student(models.Model):
-    student_id=models.AutoField(primary_key=True)
+    id=models.AutoField(primary_key=True)
     student_name=models.CharField(max_length=32)
     dob=models.DateField()
     mail_id=models.EmailField()
 
-
 class degree_provider(models.Model):
-    deg_provider_id=models.AutoField(primary_key=True)
+    id=models.AutoField(primary_key=True)
     deg_provider_name=models.CharField(max_length=32)
     mail_id=models.EmailField()
 
@@ -17,7 +16,7 @@ class degree_provider(models.Model):
 # Create your models here.
 
 class course_provider(models.Model):
-    course_provider_id=models.AutoField(primary_key=True)
+    id=models.AutoField(primary_key=True)
     course_provider_name=models.CharField(max_length=32)
     online=models.BooleanField(default=True)
     url=models.URLField()

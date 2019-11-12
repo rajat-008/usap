@@ -1,15 +1,19 @@
+{%extends 'template.html'%}
+{%block title%}Dashboard{%endblock%}
+{%block main %}
 <div class="container">
     <table class="table w-auto table-bordered">
         <tbody>
             <tr>
-                <th>course</th>
-                <th>course_detail</th>
+                <th>Course</th>
+                <th>Course Detail</th>
 
             </tr>
             <tr>
-                <td>abcxyz</td>
-              <td><a href="abcxyz">abx</td>
-
+              {% for course in courses %}
+                <td>course.course_name</td>
+              <td><a href="/course/details/{{course.id}}">Course Details</td>
+                {%endfor%}
             </tr>
 
 
@@ -21,3 +25,4 @@
     <button type="submit">Register</button>
 </form>
 </div>
+{%endblock%}
