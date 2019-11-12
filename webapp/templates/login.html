@@ -4,9 +4,9 @@
 {%block style%}
 <link href="{%static 'text1.css'%}" rel="stylesheet" type="text/css"/>{%endblock%}
 {%block main%}
-
+<center>
 <form action="/login" method="post">
-  {%csrf_token%}
+{%csrf_token%}
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
@@ -15,7 +15,7 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 <br>
-<label for="degree"><b>degree</b></label>
+<label for="Type"><b>Type</b></label>
 <select class="form-control" name="type">
   <option value="student">Student</option>
   <option value="degree_provider">Degree Provider</option>
@@ -25,14 +25,9 @@
 <br>
     <button type="submit">Login</button>
     <br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-<br>
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
+
 
   </div>
 </form>
+</center>
 {%endblock%}
