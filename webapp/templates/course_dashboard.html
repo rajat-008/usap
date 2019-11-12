@@ -9,20 +9,21 @@
                 <th>Course Detail</th>
 
             </tr>
-            <tr>
               {% for course in courses %}
-                <td>course.course_name</td>
-              <td><a href="/course/details/{{course.id}}">Course Details</td>
-                {%endfor%}
-            </tr>
+            <tr>
 
+                <td>{{course.course_name}}</td>
+              <td><a href="/course/details/{{course.Co_id}}">Course Details</a></td>
+
+            </tr>
+            {%endfor%}
 
 
 
         </tbody>
     </table>
-    <form method="get" action="/page2">
+    <form method="get" action="/course/register">
     <button type="submit">Register</button>
-</form>
+  </form>
 </div>
 {%endblock%}

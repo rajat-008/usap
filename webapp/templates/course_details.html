@@ -1,5 +1,5 @@
 {%extends 'template.html'%}
-{%block title%}Dashboard{%endblock%}
+{%block title%}Course Details{%endblock%}
 {%block main %}
 <div class="container">
     <table class="table w-auto table-bordered">
@@ -13,9 +13,10 @@
 
             </tr>
             <tr>
-              {% for course in courses %}
-                <td>course.course_name</td>
-              <td>Course Details1</td>
+              {% for student in students %}
+                <td>{{student.student.id}}</td>
+              <td>{{student.student.student_name}}</td>
+              
                 <td>Course Details2</td>
                   <td>Course Details3</td>
                 {%endfor%}
@@ -26,3 +27,4 @@
 
         </tbody>
     </table>
+{%endblock%}
