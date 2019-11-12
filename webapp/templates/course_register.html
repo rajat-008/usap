@@ -5,8 +5,8 @@
 <link href="{%static 'text1.css'%}" rel="stylesheet" type="text/css"/>{%endblock%}
 {%block main%}
 
-<form action="/login" method="post">
-
+<form action="/course/register" method="post">
+{%csrf_token%}
 
   <div class="container">
     <label for="cname"><b>Course name</b></label>
@@ -36,3 +36,4 @@
 
   </div>
 </form>
+{%endblock%}

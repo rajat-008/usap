@@ -46,3 +46,22 @@ def course_dashboard(request):
     provider=course_provider.objects.filter(id=request.session['id'])[0]
     courses=course.objects.filter(course_provider=provider)
     return render(request,"course_dashboard.html",{"courses":courses})
+
+
+def course_register(request):
+    if request.method=="POST":
+        print(request.session['id'])
+        name=request.POST.get('course_name')
+        desc=request.POST.get('desc')
+        url=request.POST.get('url')
+        duration=request.POST.get('duration')
+        credits=request.POST.get('credit')
+        provider=course_provider.objects.filter(id=request.session['id'])[0]
+        cours=course(course_provider=provider,course_name=name,description=desc,url=url,duration=duration,credits=credits)
+        cours.save()
+        return redirect(course_dashboard)
+    return render(request,"course_register.html")
+
+def course_details(request,course_id):
+    students=course_enroll.objects.filter(course__Co_id=course_id)
+    return render(request,"course_details.html",{"students":students})
