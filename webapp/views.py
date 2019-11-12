@@ -1,13 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+<<<<<<< HEAD
 from django.contrib.auth import login, logout, authenticate
 
 from .models import *
+=======
+>>>>>>> e836b40025d9aed4dd0b13b9e00a938d82e755a3
 # Create your views here.
 
 
 def index(request):
     return render(request,"login.html")
+<<<<<<< HEAD
 
 def login(request):
     if request.user.is_authenticated:
@@ -36,3 +40,5 @@ def login(request):
         return redirect(index)
     else:
         return HttpResponse("Your username and password didn't match.")
+=======
+>>>>>>> e836b40025d9aed4dd0b13b9e00a938d82e755a3

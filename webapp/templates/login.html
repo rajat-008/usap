@@ -1,0 +1,38 @@
+{%extends 'template.html'%}
+{%load static%}
+{%block title%}Login{%endblock%}
+{%block style%}
+<link href="{%static 'text1.css'%}" rel="stylesheet" type="text/css"/>{%endblock%}
+{%block main%}
+
+<form action="/login" method="post">
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+<br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+<br>
+<label for="degree"><b>degree</b></label>
+<select class="form-control" name="type">
+  <option value="Student">Student</option>
+  <option value="Degree_provider">Degree Provider</option>
+  <option value="Course_provider">Course Provider</option>
+  </select>
+
+<br>
+    <button type="submit">Login</button>
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+<br>
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+
+  </div>
+</form>
+{%endblock%}
